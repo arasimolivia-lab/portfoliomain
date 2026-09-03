@@ -1,0 +1,35 @@
+# ============================================================
+# BRANDING WORK
+# // EDIT: duplicate a block below for each branding project.
+# // "image" goes in /assets/img/work/branding/
+# // "shape" controls which bauhaus accent shape decorates the card:
+# //   choose one of: circle | triangle | square
+# ============================================================
+
+- title: "Brand Identity One"
+  client: "Client Name"
+  year: "2026"
+  shape: "circle"
+  image: "/assets/img/work/branding/placeholder-1.jpg"
+  description: "What the project was, the challenge, and what you delivered (identity system, logo suite, guidelines, etc.)."
+
+- title: "Brand Identity Two"
+  client: "Client Name"
+  year: "2025"
+  shape: "triangle"
+  image: "/assets/img/work/branding/placeholder-2.jpg"
+  description: "What the project was, the challenge, and what you delivered."
+
+- title: "Brand Identity Three"
+  client: "Client Name"
+  year: "2025"
+  shape: "square"
+  image: "/assets/img/work/branding/placeholder-3.jpg"
+  description: "What the project was, the challenge, and what you delivered."
+
+- title: "Brand Identity Four"
+  client: "Client Name"
+  year: "2024"
+  shape: "circle"
+  image: "/assets/img/work/branding/placeholder-4.jpg"
+  description: "What the project was, the challenge, and what you delivered."

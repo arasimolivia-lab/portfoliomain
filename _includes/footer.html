@@ -1,0 +1,16 @@
+<footer class="site-footer">
+  <div class="footer-mark">
+    <span class="bubble-mark bubble-mark--small">{{ site.last_name }}</span>
+  </div>
+
+  <div class="footer-links">
+    {% if site.social.instagram != "" %}<a href="{{ site.social.instagram }}" target="_blank" rel="noopener">Instagram</a>{% endif %}
+    {% if site.social.vimeo != "" %}<a href="{{ site.social.vimeo }}" target="_blank" rel="noopener">Vimeo</a>{% endif %}
+    {% if site.social.behance != "" %}<a href="{{ site.social.behance }}" target="_blank" rel="noopener">Behance</a>{% endif %}
+    {% if site.social.linkedin != "" %}<a href="{{ site.social.linkedin }}" target="_blank" rel="noopener">LinkedIn</a>{% endif %}
+    {% if site.social.github != "" %}<a href="{{ site.social.github }}" target="_blank" rel="noopener">GitHub</a>{% endif %}
+    <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+  </div>
+
+  <p class="footer-meta">{% if site.location != "" %}{{ site.location }} · {% endif %}&copy; <span id="year"></span> {{ site.first_name }} {{ site.last_name }}</p>
+</footer>

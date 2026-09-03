@@ -1,0 +1,40 @@
+# ============================================================
+# RESUME CONTENT
+# // EDIT: this feeds the /resume page. Keep the same structure
+# // (dashes and indentation) and it'll "just work."
+# // You can add or remove entries freely.
+# ============================================================
+
+experience:
+  - role: "Job Title"
+    company: "Company Name"
+    dates: "2024 — Present"
+    bullets:
+      - "What you did, led, or shipped. Lead with the verb and the result."
+      - "Second bullet — keep to 1-2 lines each."
+  - role: "Previous Job Title"
+    company: "Previous Company"
+    dates: "2022 — 2024"
+    bullets:
+      - "What you did, led, or shipped."
+      - "Second bullet."
+
+education:
+  - school: "School Name"
+    program: "Degree / Program"
+    dates: "2018 — 2022"
+
+skills:
+  - "After Effects"
+  - "Cinema 4D"
+  - "Illustrator"
+  - "Figma"
+  - "Brand Systems"
+  - "Motion Design"
+  # // EDIT: add/remove your own skills — order doesn't matter
+
+software:
+  - "Adobe Creative Suite"
+  - "Cinema 4D"
+  - "Figma"
+  # // EDIT: this list feeds a smaller "tools" row if you want one
