@@ -29,7 +29,7 @@ resume_pdf: "/assets/resume.pdf"         # // EDIT: see /assets/ folder note
 # in this folder) OR your repo is named "yourusername.github.io",
 # leave baseurl as "".
 baseurl: "/portfoliomain"                              # // EDIT: see note above
-url: ""                                  # // EDIT: e.g. "https://yourusername.github.io"
+uurl: "https://arasimolivia-lab.github.io"                                 # // EDIT: e.g. "https://yourusername.github.io"
 
 # ------------------------------------------------------------
 # Build settings — you generally don't need to touch these.
