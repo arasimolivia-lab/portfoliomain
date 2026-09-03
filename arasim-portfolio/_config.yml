@@ -28,7 +28,7 @@ resume_pdf: "/assets/resume.pdf"         # // EDIT: see /assets/ folder note
 # to "/arasim-portfolio". If you ARE using a custom domain (CNAME file
 # in this folder) OR your repo is named "yourusername.github.io",
 # leave baseurl as "".
-baseurl: ""                              # // EDIT: see note above
+baseurl: "/portfoliomain"                              # // EDIT: see note above
 url: ""                                  # // EDIT: e.g. "https://yourusername.github.io"
 
 # ------------------------------------------------------------
