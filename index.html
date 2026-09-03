@@ -1,0 +1,104 @@
+---
+layout: default
+title: Home
+---
+
+<section class="hero wrap">
+  <div class="hero-shape-field" aria-hidden="true">
+    <span class="deco-circle"></span>
+    <span class="deco-square"></span>
+    <span class="deco-triangle"></span>
+  </div>
+
+  <div class="hero-grid">
+    <span class="hero-eyebrow">{{ site.tagline }}</span>
+    <!-- // EDIT: this is the big catching header. site.first_name comes from _config.yml -->
+    <h1 class="hero-mark">{{ site.first_name }}<br>{{ site.last_name }}</h1>
+    <p class="hero-sub">
+      <!-- // EDIT: replace with your own one/two sentence intro line. -->
+      I design brand systems and build the motion that makes them move —
+      from identity to title sequence.
+    </p>
+    <div class="hero-cta-row">
+      <a href="{{ '/reel/' | relative_url }}" class="btn btn-solid">Watch the reel</a>
+      <a href="{{ '/branding/' | relative_url }}" class="btn btn-outline">See branding work</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="section-kicker">Motion</span>
+        <h2 class="section-title">Selected <span class="accent">reel</span> work</h2>
+      </div>
+      <a href="{{ '/reel/' | relative_url }}" class="section-link">View all reel work →</a>
+    </div>
+
+    <div class="work-grid">
+      {% for item in site.data.reel limit:2 %}
+      <article class="work-card">
+        <div class="work-card-media">
+          <!-- // EDIT: swap in your poster image; see _data/reel.yml -->
+          <img src="{{ item.poster | relative_url }}" alt="{{ item.title }} still" loading="lazy">
+          <span class="work-card-shape {% cycle 'circle', 'triangle', 'square' %}" aria-hidden="true"></span>
+          <span class="play-badge" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8V4z"/></svg>
+          </span>
+        </div>
+        <div class="work-card-body">
+          <h3 class="work-card-title">{{ item.title }}</h3>
+          <div class="work-card-meta"><span>{{ item.client }}</span><span>·</span><span>{{ item.year }}</span></div>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section--off">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="section-kicker">Identity</span>
+        <h2 class="section-title">Selected <span class="accent">branding</span> work</h2>
+      </div>
+      <a href="{{ '/branding/' | relative_url }}" class="section-link">View all branding work →</a>
+    </div>
+
+    <div class="work-grid">
+      {% for item in site.data.branding limit:2 %}
+      <article class="work-card">
+        <div class="work-card-media">
+          <!-- // EDIT: swap in your project image; see _data/branding.yml -->
+          <img src="{{ item.image | relative_url }}" alt="{{ item.title }}" loading="lazy">
+          <span class="work-card-shape {{ item.shape }}" aria-hidden="true"></span>
+        </div>
+        <div class="work-card-body">
+          <h3 class="work-card-title">{{ item.title }}</h3>
+          <div class="work-card-meta"><span>{{ item.client }}</span><span>·</span><span>{{ item.year }}</span></div>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap about-grid">
+    <div class="about-portrait">
+      <!-- // EDIT: replace with a portrait/photo at /assets/img/about/portrait.jpg -->
+      <img src="{{ '/assets/img/about/portrait.jpg' | relative_url }}" alt="{{ site.first_name }} {{ site.last_name }} portrait">
+    </div>
+    <div class="about-copy">
+      <span class="section-kicker">About</span>
+      <h2 class="section-title" style="margin-bottom:20px;">A little bit <span class="accent">about me</span></h2>
+      <!-- // EDIT: replace with your own short bio (2-4 sentences) -->
+      <p>I'm a designer working across brand identity and motion — I like
+        systems that hold together whether they're printed, animated, or
+        moving across a screen at 24fps.</p>
+      <a href="{{ '/about/' | relative_url }}" class="section-link">Read the full story →</a>
+    </div>
+  </div>
+</section>
