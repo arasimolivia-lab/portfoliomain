@@ -1,0 +1,54 @@
+---
+layout: default
+title: Résumé
+permalink: /resume/
+---
+
+<section class="section section--off">
+  <div class="wrap">
+    <div class="resume-head">
+      <div>
+        <span class="section-kicker">Résumé</span>
+        <h1 class="section-title">Where I've <span class="accent">worked</span></h1>
+      </div>
+      <!-- // EDIT: drop your resume PDF at /assets/resume.pdf (filename set in _config.yml) -->
+      <a href="{{ site.resume_pdf | relative_url }}" class="btn btn-outline" download>Download PDF</a>
+    </div>
+
+    <div class="resume-block">
+      <h2 class="resume-block-title">Experience</h2>
+      {% for job in site.data.resume.experience %}
+      <div class="resume-item">
+        <div class="resume-item-dates">{{ job.dates }}</div>
+        <div>
+          <div class="resume-item-role">{{ job.role }}</div>
+          <div class="resume-item-company">{{ job.company }}</div>
+          <ul>
+            {% for bullet in job.bullets %}<li>{{ bullet }}</li>{% endfor %}
+          </ul>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+    <div class="resume-block">
+      <h2 class="resume-block-title">Education</h2>
+      {% for school in site.data.resume.education %}
+      <div class="resume-item">
+        <div class="resume-item-dates">{{ school.dates }}</div>
+        <div>
+          <div class="resume-item-role">{{ school.program }}</div>
+          <div class="resume-item-company">{{ school.school }}</div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+    <div class="resume-block">
+      <h2 class="resume-block-title">Skills</h2>
+      <div class="skills-row">
+        {% for skill in site.data.resume.skills %}<span class="skill-pill">{{ skill }}</span>{% endfor %}
+      </div>
+    </div>
+  </div>
+</section>

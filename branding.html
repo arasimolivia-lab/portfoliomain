@@ -1,0 +1,36 @@
+---
+layout: default
+title: Branding
+permalink: /branding/
+body_class: ""
+---
+
+<section class="section section--off">
+  <div class="wrap">
+    <span class="section-kicker">Identity</span>
+    <h1 class="section-title" style="margin-bottom:22px;">Branding <span class="accent">work</span></h1>
+    <p class="intro-copy">
+      <!-- // EDIT: intro line for this page -->
+      Identity systems, logo suites, and the guidelines that hold them
+      together — click a project's title to add a case-study link once
+      you have one.
+    </p>
+
+    <div class="work-grid">
+      {% for item in site.data.branding %}
+      <article class="work-card">
+        <div class="work-card-media">
+          <!-- // EDIT: swap in your project image; see _data/branding.yml -->
+          <img src="{{ item.image | relative_url }}" alt="{{ item.title }}" loading="lazy">
+          <span class="work-card-shape {{ item.shape }}" aria-hidden="true"></span>
+        </div>
+        <div class="work-card-body">
+          <h3 class="work-card-title">{{ item.title }}</h3>
+          <div class="work-card-meta"><span>{{ item.client }}</span><span>·</span><span>{{ item.year }}</span></div>
+          <p style="opacity:.85;">{{ item.description }}</p>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
