@@ -1,0 +1,49 @@
+# ============================================================
+# SITE CONFIG — this is the first place to put YOUR info.
+# Everything here is available in templates as {{ site.XXXX }}
+# ============================================================
+
+title: "Arasim"                          # // EDIT: your brand name (shows in browser tab)
+first_name: "First"                      # // EDIT: your first name
+last_name: "Arasim"                      # // EDIT: your last name (already set)
+tagline: "Motion & Brand Designer"       # // EDIT: your one-line role/tagline
+description: "Motion and branding portfolio of [Your Name] Arasim." # // EDIT: SEO description
+email: "you@example.com"                 # // EDIT: your contact email
+location: "City, State"                  # // EDIT: your city (optional, shows in footer)
+
+# Social / external links — leave blank ("") to hide a link automatically
+social:
+  instagram: ""                          # // EDIT e.g. "https://instagram.com/yourhandle"
+  linkedin: ""                           # // EDIT
+  vimeo: ""                              # // EDIT — great for motion reels
+  behance: ""                            # // EDIT
+  github: ""                             # // EDIT
+
+# Resume file — drop your PDF into /assets/resume.pdf and keep this as is,
+# or change the filename here if you name it something else.
+resume_pdf: "/assets/resume.pdf"         # // EDIT: see /assets/ folder note
+
+# GitHub Pages needs this to build correctly. If your repo is named
+# "arasim-portfolio" and you are NOT using a custom domain, set baseurl
+# to "/arasim-portfolio". If you ARE using a custom domain (CNAME file
+# in this folder) OR your repo is named "yourusername.github.io",
+# leave baseurl as "".
+baseurl: ""                              # // EDIT: see note above
+url: ""                                  # // EDIT: e.g. "https://yourusername.github.io"
+
+# ------------------------------------------------------------
+# Build settings — you generally don't need to touch these.
+# ------------------------------------------------------------
+markdown: kramdown
+permalink: pretty
+sass:
+  style: compressed
+
+plugins:
+  - jekyll-sitemap
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor

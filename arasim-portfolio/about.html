@@ -1,0 +1,60 @@
+---
+layout: default
+title: About
+permalink: /about/
+---
+
+<section class="section">
+  <div class="wrap about-grid">
+    <div class="about-portrait">
+      <!-- // EDIT: same portrait as homepage, or swap for a different shot -->
+      <img src="{{ '/assets/img/about/portrait.jpg' | relative_url }}" alt="{{ site.first_name }} {{ site.last_name }} portrait">
+    </div>
+
+    <div class="about-copy">
+      <span class="section-kicker">About</span>
+      <h1 class="section-title" style="margin-bottom:24px;">Hi, I'm <span class="accent">{{ site.first_name }}</span>.</h1>
+
+      <!-- // EDIT: replace this whole bio with your own story — background,
+           how you got into design, what you're drawn to, how you work. -->
+      <p>
+        I'm a designer working at the intersection of brand identity and
+        motion. I studied [program] at [school], and since then I've
+        worked on identity systems, animated titles, and everything in
+        between — always looking for the moment a static mark can move.
+      </p>
+      <p>
+        Outside of client work I like [hobby/interest], [hobby/interest],
+        and [hobby/interest] — replace this with whatever makes the page
+        feel like you.
+      </p>
+
+      <div class="fact-grid">
+        <div class="fact">
+          <div class="fact-label">Based in</div>
+          <!-- // EDIT -->
+          <div class="fact-value">{{ site.location }}</div>
+        </div>
+        <div class="fact">
+          <div class="fact-label">Focus</div>
+          <!-- // EDIT -->
+          <div class="fact-value">Brand & Motion</div>
+        </div>
+        <div class="fact">
+          <div class="fact-label">Tools</div>
+          <!-- // EDIT -->
+          <div class="fact-value">AE · C4D · Figma</div>
+        </div>
+        <div class="fact">
+          <div class="fact-label">Available for</div>
+          <!-- // EDIT -->
+          <div class="fact-value">Freelance / Full-time</div>
+        </div>
+      </div>
+
+      <div style="margin-top:40px;">
+        <a href="{{ '/resume/' | relative_url }}" class="btn btn-solid">View résumé</a>
+      </div>
+    </div>
+  </div>
+</section>

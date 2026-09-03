@@ -1,0 +1,21 @@
+<header class="site-header">
+  <a class="brand" href="{{ '/' | relative_url }}" aria-label="{{ site.first_name }} {{ site.last_name }} — home">
+    <!-- Bubble-letter branding: layered text-shadows in style.scss give the
+         chunky poster-bubble look. Change site.last_name in _config.yml to
+         update the wordmark everywhere it appears. -->
+    <span class="bubble-mark">{{ site.last_name }}</span>
+  </a>
+
+  <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="site-nav">
+    <span></span><span></span><span></span>
+    <span class="sr-only">Menu</span>
+  </button>
+
+  <nav class="site-nav" id="site-nav">
+    <a href="{{ '/' | relative_url }}" class="nav-link{% if page.url == '/' %} is-active{% endif %}"><span class="nav-shape shape-circle"></span>Home</a>
+    <a href="{{ '/reel/' | relative_url }}" class="nav-link{% if page.url contains '/reel' %} is-active{% endif %}"><span class="nav-shape shape-triangle"></span>Reel</a>
+    <a href="{{ '/branding/' | relative_url }}" class="nav-link{% if page.url contains '/branding' %} is-active{% endif %}"><span class="nav-shape shape-square"></span>Branding</a>
+    <a href="{{ '/about/' | relative_url }}" class="nav-link{% if page.url contains '/about' %} is-active{% endif %}"><span class="nav-shape shape-circle"></span>About</a>
+    <a href="{{ '/resume/' | relative_url }}" class="nav-link{% if page.url contains '/resume' %} is-active{% endif %}"><span class="nav-shape shape-triangle"></span>Résumé</a>
+  </nav>
+</header>

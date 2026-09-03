@@ -1,0 +1,32 @@
+# ============================================================
+# MOTION / REEL WORK
+# // EDIT: duplicate a block below for each motion piece.
+# // "video" should point to an mp4 you've placed in /assets/video/
+# // "poster" is a static thumbnail image shown before the video plays,
+# //   place it in /assets/img/work/reel/
+# // "tags" are short labels (e.g. "Title Sequence", "2D", "Client Work")
+# ============================================================
+
+- title: "Project Title One"
+  client: "Client / Studio Name"
+  year: "2026"
+  tags: ["Motion", "Title Sequence"]
+  poster: "/assets/img/work/reel/placeholder-1.jpg"
+  video: "/assets/video/placeholder-1.mp4"
+  description: "One or two sentences on the brief, the approach, and your role."
+
+- title: "Project Title Two"
+  client: "Client / Studio Name"
+  year: "2025"
+  tags: ["2D Animation", "Explainer"]
+  poster: "/assets/img/work/reel/placeholder-2.jpg"
+  video: "/assets/video/placeholder-2.mp4"
+  description: "One or two sentences on the brief, the approach, and your role."
+
+- title: "Project Title Three"
+  client: "Client / Studio Name"
+  year: "2025"
+  tags: ["Logo Animation"]
+  poster: "/assets/img/work/reel/placeholder-3.jpg"
+  video: "/assets/video/placeholder-3.mp4"
+  description: "One or two sentences on the brief, the approach, and your role."

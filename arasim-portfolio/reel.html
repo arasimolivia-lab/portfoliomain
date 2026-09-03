@@ -1,0 +1,66 @@
+---
+layout: default
+title: Reel
+permalink: /reel/
+---
+
+<section class="section">
+  <div class="wrap">
+    <span class="section-kicker">Motion</span>
+    <h1 class="section-title" style="margin-bottom:22px;">Demo <span class="accent">reel</span></h1>
+    <p class="intro-copy">
+      <!-- // EDIT: intro line for this page -->
+      A running collection of animation, title work, and motion design.
+      Hover a project below for a preview, or watch the full reel here.
+    </p>
+
+    <!-- FEATURED DEMO REEL
+         // EDIT: put your main reel video at /assets/video/demo-reel.mp4
+         // and a thumbnail at /assets/img/work/reel/reel-poster.jpg.
+         // If you'd rather embed Vimeo/YouTube, replace the <video> tag
+         // below with their embed <iframe> code. -->
+    <div class="reel-hero">
+      <video
+        controls
+        preload="metadata"
+        poster="{{ '/assets/img/work/reel/reel-poster.jpg' | relative_url }}">
+        <source src="{{ '/assets/video/demo-reel.mp4' | relative_url }}" type="video/mp4">
+        Your browser doesn't support embedded video —
+        <a href="{{ '/assets/video/demo-reel.mp4' | relative_url }}">download the reel</a> instead.
+      </video>
+      <span class="reel-hero-label">2026 Demo Reel</span>
+    </div>
+
+    <div class="section-head">
+      <div>
+        <h2 class="section-title" style="font-size:1.8rem;">Project breakdown</h2>
+      </div>
+    </div>
+
+    <div class="work-grid">
+      {% for item in site.data.reel %}
+      <article class="work-card">
+        <div class="work-card-media">
+          <!-- Poster shows by default; video (muted) previews on hover via main.js -->
+          <img src="{{ item.poster | relative_url }}" alt="{{ item.title }} still" loading="lazy">
+          <video src="{{ item.video | relative_url }}" muted loop playsinline preload="none"
+                 style="position:absolute; inset:0; opacity:0; z-index:1;"
+                 onplay="this.style.opacity=1" onpause="this.style.opacity=0"></video>
+          <span class="work-card-shape {% cycle 'circle', 'triangle', 'square' %}" aria-hidden="true"></span>
+          <span class="play-badge" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8V4z"/></svg>
+          </span>
+        </div>
+        <div class="work-card-body">
+          <h3 class="work-card-title">{{ item.title }}</h3>
+          <div class="work-card-meta"><span>{{ item.client }}</span><span>·</span><span>{{ item.year }}</span></div>
+          <p style="opacity:.85;">{{ item.description }}</p>
+          <div class="work-card-tags">
+            {% for tag in item.tags %}<span class="tag">{{ tag }}</span>{% endfor %}
+          </div>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
